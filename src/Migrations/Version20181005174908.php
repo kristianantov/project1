@@ -20,7 +20,7 @@ final class Version20181005174908 extends AbstractMigration
               `email` varchar(255) DEFAULT 'null',
               `username` varchar(255) DEFAULT 'null',
               `password` varchar(255) DEFAULT 'null',
-              `register_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
+              `register_datetime` datetime,
                PRIMARY KEY (`id`)
                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
         
