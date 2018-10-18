@@ -1,4 +1,7 @@
 @import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+
+
 
 body {
   color: blue;
@@ -7,4 +10,12 @@ body {
 .foo-button {
   @include mdc-button-ink-color(red);
   @include mdc-states(red);
+}
+
+
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
 }

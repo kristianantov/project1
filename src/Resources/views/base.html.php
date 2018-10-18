@@ -10,11 +10,17 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/bundle.css">
+    <link rel="stylesheet" href="css/ui.css">
+
 </head>
 <body>
-<button class="foo-button mdc-button">
-    Button
-</button>
+
+
+<div class="mdc-text-field">
+    <input type="text" id="my-text-field" class="mdc-text-field__input">
+    <label class="mdc-floating-label" for="my-text-field">Hint text</label>
+    <div class="mdc-line-ripple"></div>
+</div>
 
 <script src="js/bundle.js" async></script>
 </body>
