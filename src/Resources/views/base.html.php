@@ -10,7 +10,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/bundle.css">
-    <link rel="stylesheet" href="css/ui.css">
+
 
 </head>
 <body>

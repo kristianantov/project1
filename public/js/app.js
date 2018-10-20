@@ -36,7 +36,9 @@ const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 
 
     $( "#my-text-field" ).autocomplete({
-        source: availableTags
+        source: function (request, response) {
+            $.getJSON("autocomplete", { term: request.term }, response);
+        }
     });
 
 
