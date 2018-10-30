@@ -6,19 +6,28 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Doctrine\DBAL\Driver\Connection;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 
 class DefaultController extends Controller
 {
 
 
-    public function index(Connection $connection)
+    public function index(Connection $connection, Request $request)
     {
         $users = $connection->fetchAll('SELECT * FROM user');
         $name = "Hello World";
 
-        return $this->render('base.html.php', array(
-            'name' => $name
+        if($request->get("sbm")) {
+
+
+
+        }
+
+
+        return $this->render('a.html.php', array(
+            'name' => $name,
+            'request' => $request
         ));
 
     }
@@ -51,7 +60,7 @@ class DefaultController extends Controller
             "Scheme"
         ];
 
-        return JsonResponse::create($availableTags);
+        return $this->json($availableTags);
 
     }
 
